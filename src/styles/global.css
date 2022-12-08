@@ -5,10 +5,17 @@ html {
 
 body {
     margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
     line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
 }
 
 * {
@@ -18,4 +25,92 @@ body {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+}
+
+.greeting {
+    border: 1px solid;
+    border-color: black;
+    padding: 1rem;
+}
+
+.dark body {
+    background-color: #0d0950;
+    color: #fff;
+}
+
+.dark .nav-links a {
+    color: #fff;
+}
+
+/* nav styles */
+
+.hamburger {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
+}
+
+.nav-links {
+    width: 100%;
+    top: 5rem;
+    left: 48px;
+    background-color: #ff9776;
+    display: none;
+    margin: 0;
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover,
+a:focus {
+    background-color: #ff9776;
+}
+
+.expanded {
+    display: unset;
+}
+
+.text--align-center {
+    text-align: center;
+} 
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+@media screen and (min-width: 636px) {
+    .nav-links {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
